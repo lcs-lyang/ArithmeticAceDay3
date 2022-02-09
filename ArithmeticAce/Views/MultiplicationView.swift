@@ -118,6 +118,17 @@ struct MultiplicationView: View {
                 
             }
             
+            
+            //Reaction animation
+            
+            ZStack {
+                LottieView(animationNamed: "51926-happy")
+                    .opacity(answerCorrect == true ? 1.0 : 0.0)
+                
+                LottieView(animationNamed: "86967-shiba-sad")
+                    .opacity(answerChecked == true && answerCorrect == false ? 1.0 : 0.0)
+            }
+            
             Spacer()
         }
         .padding(.horizontal)
